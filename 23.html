@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Favourite Person Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #F0F0F2;
+        }
+        h1 {
+            color: #FF5A43;
+        }
+    </style>
+</head>
+<body class="py-4">
+
+<div class="container">
+    <h1>My Favourite Person Profile</h1>
+    <p class="text-muted">Introduction to Objects in JavaScript</p>
+
+    <div class="card shadow-sm" style="max-width:400px;">
+        <div class="card-body">
+            <h5 class="card-title">Profile Details</h5>
+            <p>Name: <strong id="name"></strong></p>
+            <p>Relationship: <strong id="relationship"></strong></p>
+            <p>Favourite Activity: <strong id="activity"></strong></p>
+            <p>City: <strong id="city"></strong></p>
+        </div>
+    </div>
+
+    <div class="card mt-3" style="max-width:400px;">
+        <div class="card-body">
+            <h6>JavaScript Object Used</h6>
+            <pre id="codeDisplay"></pre>
+        </div>
+    </div>
+</div>
+
+<script>
+    let favouritePerson = {
+        name: "My Mother",
+        relationship: "Mother",
+        activity: "Reading",
+        city: "Delhi"
+    };
+
+    document.getElementById("name").innerHTML = favouritePerson.name;
+
+    document.getElementById("relationship").innerHTML = favouritePerson.relationship;
+
+    document.getElementById("activity").innerHTML = favouritePerson["activity"];
+
+    document.getElementById("city").innerHTML = favouritePerson["city"];
+
+    document.getElementById("codeDisplay").innerHTML =
+        JSON.stringify(favouritePerson, null, 4);
+</script>
+
+</body>
+</html>
