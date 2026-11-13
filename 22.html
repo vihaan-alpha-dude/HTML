@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Methods and Loops</title>
+</head>
+<body>
+
+    <h1>Methods and Loops</h1>
+
+    <h3>Numbers from 1 to 10</h3>
+    <p id="numbers"></p>
+
+    <h3>Random Number</h3>
+    <p id="random"></p>
+
+    <h3>Today's Day Number</h3>
+    <p id="day"></p>
+
+    <script>
+        let text = "";
+
+        for (let i = 1; i <= 10; i++) {
+            text = text + i + "<br>";
+        }
+
+        document.getElementById("numbers").innerHTML = text;
+
+        let randomNumber = Math.floor(Math.random() * 100);
+
+        document.getElementById("random").innerHTML =
+            "The random number is " + randomNumber;
+
+        let dayNumber = new Date().getDay();
+
+        document.getElementById("day").innerHTML =
+            "Today's day number is " + dayNumber;
+    </script>
+
+</body>
+</html>
