@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Data Structure and Array</title>
+</head>
+<body>
+
+    <h1>Object Data Structure and Array</h1>
+
+    <h3>Student Details</h3>
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="city"></p>
+
+    <h3>Colours Array</h3>
+    <p id="colour"></p>
+    <p id="list"></p>
+    <p id="removed"></p>
+    <p id="newList"></p>
+
+    <script>
+        let student = {
+            name: "Vihaan",
+            age: 13,
+            city: "Delhi"
+        };
+
+        document.getElementById("name").innerHTML =
+            "Name: " + student.name;
+
+        document.getElementById("age").innerHTML =
+            "Age: " + student["age"];
+
+        document.getElementById("city").innerHTML =
+            "City: " + student.city;
+
+        let colours = ["Red", "Blue", "Green", "Yellow"];
+
+        document.getElementById("colour").innerHTML =
+            "Third colour: " + colours[2];
+
+        document.getElementById("list").innerHTML =
+            "All colours: " + colours.join(", ");
+
+        let removedColour = colours.pop();
+
+        document.getElementById("removed").innerHTML =
+            "Removed colour: " + removedColour;
+
+        document.getElementById("newList").innerHTML =
+            "New list: " + colours.join(", ");
+    </script>
+
+</body>
+</html>
